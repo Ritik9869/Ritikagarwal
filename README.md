@@ -35,3 +35,42 @@ FastReader fr = new FastReader();
 			--r;
 			int left = (l == 0) ? 0 : temp[l - 1];
 			System.out.println(temp[r] - left);
+2.
+
+
+
+https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/monk-and-lucky-minimum-3/
+
+
+for finding the frequency of min  number we have not needed to sort the array everytime we have to just iterate over the elements and set min =1 whenever the minimum number come as compared to previous number.
+must learn the concepts
+
+
+
+Reader sc = new Reader();
+	   	int t = sc.nextInt();
+	   	while(t-- >0)
+	   	{
+	   		int n = sc.nextInt();
+	   		int a[] = new int[n];
+	   		int min = Integer.MAX_VALUE,count=0;
+	   		for(int i=0;i<n;i++)
+	   		{
+	   			int value = sc.nextInt();
+	   			if(value<min)
+	   			{
+	   				min = value;
+	   				count = 1;
+	   			}
+	   			if(value==min)
+	   				count++;
+	   		}
+	   		if(count%2!=0)
+	   			System.out.println("Unlucky");
+	   		else
+	   			System.out.println("Lucky");
+ 
+	   	}
+
+
+
